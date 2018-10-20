@@ -10,6 +10,7 @@ public class Message {
 
     private String text;
     private String tag;
+    private String filename;
 
     @ManyToOne
     private User author;
@@ -55,7 +56,15 @@ public class Message {
         this.author = author;
     }
 
+    public String getFilename() {
+        return filename;
+    }
+
+    public void setFilename(String filename) {
+        this.filename = filename;
+    }
+
     public String getAuthorName() {
-        return author != null ? author.getUsername() : "<none>";
+        return author != null ? author.getUsername() : "Неизвестно";
     }
 }
