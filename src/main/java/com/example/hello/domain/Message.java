@@ -65,6 +65,6 @@ public class Message {
     }
 
     public String getAuthorName() {
-        return author != null ? author.getUsername() : "Неизвестно";
+        return author != null ? author.getUsername() : "<none>";
     }
 }
